@@ -2,7 +2,7 @@ using MStarSupply.Enums;
 
 namespace MStarSupply.Models;
 
-public class OrderModel
+public class Order
 {
     public Guid OrderId { get; set; }
 
@@ -13,5 +13,5 @@ public class OrderModel
     public OrderTypeEnum OrderType { get; set; }
 
     /* EF Relations */
-    public ICollection<TransactionModel> Transactions { get; set; }
+    public ICollection<OrderProduct> OrderProducts { get; set; }
 }

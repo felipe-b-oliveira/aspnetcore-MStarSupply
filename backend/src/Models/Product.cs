@@ -1,6 +1,6 @@
 namespace MStarSupply.Models;
 
-public class ProductModel
+public class Product
 {
     public Guid ProductId { get; set; }
 
@@ -15,5 +15,5 @@ public class ProductModel
     public string Description { get; set; }
 
     /* EF Relations */
-    public ICollection<TransactionModel> Transactions { get; set; }
+    public ICollection<OrderProduct> OrderProducts { get; set; }
 }
